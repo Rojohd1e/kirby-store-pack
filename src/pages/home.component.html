@@ -1,0 +1,12 @@
+<div class="home">
+  <h1>Bienvenido a KirbyTienda</h1>
+  <h2>Productos Destacados</h2>
+  <div class="featured-products">
+    <div *ngFor="let product of featuredProducts" class="product-card">
+      <img [src]="product.image" [alt]="product.name">
+      <h3>{{ product.name }}</h3>
+      <p>{{ product.price | currency }}</p>
+      <button>Ver Detalles</button>
+    </div>
+  </div>
+</div>

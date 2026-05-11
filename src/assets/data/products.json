@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Producto 1",
+    "price": 10.99,
+    "description": "Descripción del producto 1",
+    "image": "assets/img/product1.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Producto 2",
+    "price": 15.99,
+    "description": "Descripción del producto 2",
+    "image": "assets/img/product2.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Producto 3",
+    "price": 20.99,
+    "description": "Descripción del producto 3",
+    "image": "assets/img/product3.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Producto 4",
+    "price": 25.99,
+    "description": "Descripción del producto 4",
+    "image": "assets/img/product4.jpg"
+  }
+]

@@ -1,0 +1,18 @@
+.producto {
+  padding: 2rem;
+  text-align: center;
+}
+
+.producto img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.producto button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  cursor: pointer;
+}
