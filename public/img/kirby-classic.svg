@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-label="Figura Kirby Classic">
+  <rect width="640" height="420" fill="#f8f9fa"/>
+  <circle cx="320" cy="210" r="118" fill="#f48fb1"/>
+  <ellipse cx="260" cy="325" rx="62" ry="32" fill="#d85b7d"/>
+  <ellipse cx="380" cy="325" rx="62" ry="32" fill="#d85b7d"/>
+  <ellipse cx="282" cy="178" rx="17" ry="38" fill="#212529"/>
+  <ellipse cx="358" cy="178" rx="17" ry="38" fill="#212529"/>
+  <circle cx="289" cy="162" r="7" fill="#fff"/>
+  <circle cx="365" cy="162" r="7" fill="#fff"/>
+  <path d="M286 238c22 24 48 24 70 0" fill="none" stroke="#7a2036" stroke-width="11" stroke-linecap="round"/>
+  <circle cx="236" cy="221" r="19" fill="#ef6f9a" opacity=".75"/>
+  <circle cx="404" cy="221" r="19" fill="#ef6f9a" opacity=".75"/>
+</svg>

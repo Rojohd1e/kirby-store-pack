@@ -1,1 +1,70 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --pink-main: #ff6bae;
+  --pink-dark: #e0488e;
+  --pink-light: #ffd6ec;
+  --pink-pale: #fff0f8;
+  --text-dark: #3a1a2e;
+  --text-mid: #7a4060;
+  --star-yellow: #ffd700;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(160deg, #fff0f8 0%, #ffdaee 40%, #fff0fb 100%);
+  color: var(--text-dark);
+  font-family: "Nunito", system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "✦ ✧ ✦ ✧ ✦ ✧ ✦ ✧ ✦ ✧ ✦ ✧ ✦ ✧ ✦ ✧ ✦ ✧ ✦ ✧ ✦ ✧";
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  color: rgba(255, 107, 174, 0.12);
+  font-size: 14px;
+  letter-spacing: 2.2rem;
+  line-height: 3.5rem;
+  pointer-events: none;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+}
+
+.section-title {
+  color: var(--pink-dark);
+  font-family: "Baloo 2", "Nunito", sans-serif;
+  font-size: clamp(2.25rem, 6vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  text-shadow: 3px 3px 0 rgba(255, 107, 174, 0.2);
+}
+
+.kirby-eyebrow {
+  color: var(--text-mid);
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.btn-session {
+  background: linear-gradient(135deg, var(--pink-main) 0%, var(--pink-dark) 100%);
+  border: none;
+  border-radius: 999px;
+  box-shadow: 0 5px 16px rgba(224, 72, 142, 0.35);
+  color: #ffffff !important;
+  font-weight: 800;
+  padding: 0.7rem 1.2rem;
+}
+
+.btn-session:hover {
+  box-shadow: 0 10px 22px rgba(224, 72, 142, 0.45);
+  color: #ffffff !important;
+  transform: translateY(-2px);
+}

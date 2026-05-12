@@ -7,6 +7,7 @@ import { ProductoComponent } from '../pages/producto.component';
 import { PagoComponent } from '../pages/pago.component';
 import { ContactoComponent } from '../pages/contacto.component';
 import { AboutUsComponent } from '../pages/about-us.component';
+import { NotFoundComponent } from '../pages/not-found.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -17,5 +18,5 @@ export const routes: Routes = [
   { path: 'pago', component: PagoComponent },
   { path: 'contacto', component: ContactoComponent },
   { path: 'about', component: AboutUsComponent },
-  { path: '**', redirectTo: '' }
+  { path: '**', component: NotFoundComponent }
 ];

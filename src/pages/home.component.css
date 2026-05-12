@@ -1,32 +1,144 @@
-.home {
-  padding: 2rem;
-  text-align: center;
+.home-hero {
+  padding: 4.5rem 0 3rem;
 }
 
-.featured-products {
+.hero-copy {
+  color: #7a4060;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.7;
+}
+
+.hero-button {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.hero-showcase {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 360px;
+}
+
+.hero-main-image {
+  width: min(100%, 380px);
+  border-radius: 32px;
+  box-shadow: 0 18px 44px rgba(255, 107, 174, 0.28), 0 0 0 10px #ffd6ec;
+}
+
+.hero-orbit {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 86px;
+  height: 86px;
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 8px 24px rgba(255, 107, 174, 0.24), 0 0 0 6px #ffd6ec;
+  font-size: 2.5rem;
+}
+
+.orbit-one {
+  top: 10px;
+  left: 8%;
+}
+
+.orbit-two {
+  top: 48px;
+  right: 4%;
+}
+
+.orbit-three {
+  bottom: 18px;
+  left: 18%;
+}
+
+.features-strip {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
-  margin-top: 2rem;
+  gap: 1rem;
 }
 
-.product-card {
-  border: 1px solid #ddd;
-  padding: 1rem;
-  border-radius: 8px;
-  width: 200px;
+.feature-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #ffffff;
+  border-radius: 999px;
+  box-shadow: 0 3px 14px rgba(255, 107, 174, 0.15), 0 0 0 1.5px #ffd6ec;
+  color: #3a1a2e;
+  font-size: 0.9rem;
+  font-weight: 800;
+  padding: 0.75rem 1.35rem;
 }
 
-.product-card img {
+.home-section-title {
+  color: #e0488e;
+  font-family: "Baloo 2", "Nunito", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 800;
+}
+
+.home-product-card {
+  overflow: hidden;
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 8px 28px rgba(255, 107, 174, 0.18);
+}
+
+.home-product-image {
+  display: grid;
+  place-items: center;
+  height: 220px;
+  background: linear-gradient(135deg, #ffd6ec 0%, #fff0f8 100%);
+}
+
+.home-product-image img {
   width: 100%;
-  height: 150px;
+  height: 100%;
   object-fit: cover;
 }
 
-.product-card button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 0.5rem;
-  cursor: pointer;
+.home-product-card h3 {
+  color: #3a1a2e;
+  font-family: "Baloo 2", "Nunito", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+.stars {
+  color: #ffd700;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.45rem;
+}
+
+.price {
+  color: #e0488e;
+  font-size: 1.3rem;
+  font-weight: 900;
+}
+
+.btn-details {
+  display: inline-block;
+  background: linear-gradient(135deg, #ff6bae 0%, #e0488e 100%);
+  border-radius: 999px;
+  box-shadow: 0 5px 16px rgba(224, 72, 142, 0.35);
+  color: #ffffff;
+  font-weight: 800;
+  padding: 0.65rem 1rem;
+  text-decoration: none;
+}
+
+@media (max-width: 575.98px) {
+  .hero-showcase {
+    min-height: 300px;
+  }
+
+  .hero-orbit {
+    width: 68px;
+    height: 68px;
+    font-size: 2rem;
+  }
 }

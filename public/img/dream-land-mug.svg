@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-label="Taza Dream Land">
+  <rect width="640" height="420" fill="#fff4e6"/>
+  <path d="M210 136h240v126a100 100 0 0 1-100 100h-40a100 100 0 0 1-100-100z" fill="#fff" stroke="#343a40" stroke-width="12"/>
+  <path d="M450 174h34a56 56 0 0 1 0 112h-34v-34h30a22 22 0 0 0 0-44h-30z" fill="#fff" stroke="#343a40" stroke-width="12"/>
+  <circle cx="320" cy="234" r="54" fill="#f783ac"/>
+  <ellipse cx="302" cy="220" rx="8" ry="18" fill="#212529"/>
+  <ellipse cx="338" cy="220" rx="8" ry="18" fill="#212529"/>
+  <path d="M305 250c11 10 19 10 30 0" fill="none" stroke="#862e4e" stroke-width="6" stroke-linecap="round"/>
+  <path d="M178 118c24-38 62-56 114-54" fill="none" stroke="#74c0fc" stroke-width="16" stroke-linecap="round"/>
+</svg>

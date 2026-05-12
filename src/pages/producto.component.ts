@@ -1,34 +1,40 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
-
-interface Product {
-  id: number;
-  name: string;
-  price: number;
-  description: string;
-  image: string;
-}
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, RouterLink } from '@angular/router';
+import { Producto } from '../app/models/producto';
+import { ProductoService } from '../app/services/producto.service';
 
 @Component({
   selector: 'app-producto',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './producto.component.html',
-  styleUrls: ['./producto.component.css']
+  styleUrls: ['./producto.component.css'],
 })
 export class ProductoComponent implements OnInit {
-  product: Product | null = null;
+  producto: Producto | undefined;
+  cargando = true;
 
-  constructor(private route: ActivatedRoute, private http: HttpClient) {}
+  constructor(
+    private readonly route: ActivatedRoute,
+    private readonly productoService: ProductoService,
+  ) {}
 
   ngOnInit() {
-    const id = this.route.snapshot.paramMap.get('id');
-    if (id) {
-      this.http.get<Product[]>('assets/data/products.json').subscribe(products => {
-        this.product = products.find(p => p.id === +id) || null;
+    this.route.paramMap.subscribe((params) => {
+      const id = Number(params.get('id'));
+
+      if (!id) {
+        this.producto = undefined;
+        this.cargando = false;
+        return;
+      }
+
+      this.cargando = true;
+      this.productoService.obtenerProductoPorId(id).subscribe((producto) => {
+        this.producto = producto;
+        this.cargando = false;
       });
-    }
+    });
   }
 }

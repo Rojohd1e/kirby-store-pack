@@ -1,13 +1,16 @@
-<nav class="navbar">
-  <div class="navbar-brand">
-    <a routerLink="/">KirbyTienda</a>
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand fw-bold" routerLink="/">
+      <span class="kirby-logo">🌸</span>
+      KirbyShop
+    </a>
+    <div class="navbar-nav flex-row flex-wrap gap-3 ms-lg-auto">
+      <a class="nav-link" routerLink="/">Inicio</a>
+      <a class="nav-link" routerLink="/catalogo">Catalogo</a>
+      <a class="nav-link" routerLink="/contacto">Contacto</a>
+      <a class="nav-link" routerLink="/about">Sobre Nosotros</a>
+      <a class="btn btn-session px-4" routerLink="/login">Iniciar Sesion</a>
+      <a class="nav-link" routerLink="/register">Registrarse</a>
+    </div>
   </div>
-  <ul class="navbar-nav">
-    <li><a routerLink="/">Inicio</a></li>
-    <li><a routerLink="/catalogo">Catálogo</a></li>
-    <li><a routerLink="/contacto">Contacto</a></li>
-    <li><a routerLink="/about">Sobre Nosotros</a></li>
-    <li><a routerLink="/login">Iniciar Sesión</a></li>
-    <li><a routerLink="/register">Registrarse</a></li>
-  </ul>
 </nav>

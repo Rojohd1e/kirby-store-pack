@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-label="Camiseta Warp Star">
+  <rect width="640" height="420" fill="#f1f3f5"/>
+  <path d="M230 94h180l82 58-54 74-38-28v142H240V198l-38 28-54-74z" fill="#91a7ff" stroke="#343a40" stroke-width="10" stroke-linejoin="round"/>
+  <path d="m320 155 26 53 59 9-43 42 10 59-52-28-52 28 10-59-43-42 59-9z" fill="#ffd43b"/>
+  <circle cx="320" cy="244" r="34" fill="#f783ac"/>
+  <ellipse cx="310" cy="235" rx="5" ry="12" fill="#212529"/>
+  <ellipse cx="330" cy="235" rx="5" ry="12" fill="#212529"/>
+</svg>

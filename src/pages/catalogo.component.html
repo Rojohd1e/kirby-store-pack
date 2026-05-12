@@ -1,12 +1,42 @@
-<div class="catalogo">
-  <h2>Catálogo de Productos</h2>
-  <div class="products-grid">
-    <div *ngFor="let product of products" class="product-card">
-      <img [src]="product.image" [alt]="product.name">
-      <h3>{{ product.name }}</h3>
-      <p>{{ product.description }}</p>
-      <p>{{ product.price | currency }}</p>
-      <button>Ver Detalles</button>
+<section class="container py-5">
+  <div class="catalog-hero text-center mb-5">
+    <p class="kirby-eyebrow mb-2">KirbyShop</p>
+    <h1 class="section-title">Mas Populares</h1>
+    <p class="catalog-subtitle mx-auto">
+      Accesorios y merchandise de Kirby cargados dinamicamente desde JSON.
+    </p>
+  </div>
+
+  <div *ngIf="cargando" class="alert alert-info" role="status">
+    Cargando productos...
+  </div>
+
+  <div class="row g-4" *ngIf="!cargando">
+    <div class="col-12 col-sm-6 col-lg-4" *ngFor="let producto of productos">
+      <article class="product-card h-100">
+        <span *ngIf="producto.etiqueta" class="badge-new">{{ producto.etiqueta }}</span>
+        <div class="card-img-wrap" aria-hidden="true">
+          {{ producto.icono }}
+        </div>
+        <div class="product-info d-flex flex-column">
+          <div class="stars">{{ producto.valoracion }}</div>
+          <h2>{{ producto.nombre }}</h2>
+          <span class="category-tag">{{ producto.categoria }}</span>
+          <p class="description flex-grow-1">{{ producto.descripcion }}</p>
+          <div class="d-flex align-items-center justify-content-between gap-3 mt-auto">
+            <p class="price mb-0">{{ producto.precio | currency:'EUR':'symbol':'1.2-2' }}</p>
+            <a [routerLink]="['/producto', producto.id]" class="btn-details">
+              Ver Detalle
+            </a>
+          </div>
+          <a
+            [routerLink]="['/producto', producto.id]"
+            class="visually-hidden"
+          >
+            Ver mas
+          </a>
+        </div>
+      </article>
     </div>
   </div>
-</div>
+</section>

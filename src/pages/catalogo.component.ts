@@ -1,30 +1,26 @@
-import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
-
-interface Product {
-  id: number;
-  name: string;
-  price: number;
-  description: string;
-  image: string;
-}
+import { Component, OnInit } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { Producto } from '../app/models/producto';
+import { ProductoService } from '../app/services/producto.service';
 
 @Component({
   selector: 'app-catalogo',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './catalogo.component.html',
-  styleUrls: ['./catalogo.component.css']
+  styleUrls: ['./catalogo.component.css'],
 })
 export class CatalogoComponent implements OnInit {
-  products: Product[] = [];
+  productos: Producto[] = [];
+  cargando = true;
 
-  constructor(private http: HttpClient) {}
+  constructor(private readonly productoService: ProductoService) {}
 
   ngOnInit() {
-    this.http.get<Product[]>('assets/data/products.json').subscribe(data => {
-      this.products = data;
+    this.productoService.obtenerProductos().subscribe((productos) => {
+      this.productos = productos;
+      this.cargando = false;
     });
   }
 }

@@ -1,17 +1,24 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { Producto } from '../app/models/producto';
+import { ProductoService } from '../app/services/producto.service';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
 })
-export class HomeComponent {
-  featuredProducts = [
-    { id: 1, name: 'Producto 1', price: 10.99, image: 'assets/img/product1.jpg' },
-    { id: 2, name: 'Producto 2', price: 15.99, image: 'assets/img/product2.jpg' },
-    { id: 3, name: 'Producto 3', price: 20.99, image: 'assets/img/product3.jpg' }
-  ];
+export class HomeComponent implements OnInit {
+  productosDestacados: Producto[] = [];
+
+  constructor(private readonly productoService: ProductoService) {}
+
+  ngOnInit() {
+    this.productoService.obtenerProductos().subscribe((productos) => {
+      this.productosDestacados = productos.slice(0, 3);
+    });
+  }
 }

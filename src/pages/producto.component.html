@@ -1,10 +1,41 @@
-<div class="producto" *ngIf="product">
-  <img [src]="product.image" [alt]="product.name">
-  <h2>{{ product.name }}</h2>
-  <p>{{ product.description }}</p>
-  <p>{{ product.price | currency }}</p>
-  <button>Agregar al Carrito</button>
-</div>
-<div *ngIf="!product">
-  <p>Producto no encontrado.</p>
-</div>
+<section class="container py-5">
+  <div *ngIf="cargando" class="alert alert-info" role="status">
+    Cargando producto...
+  </div>
+
+  <div *ngIf="!cargando && producto" class="row g-4 align-items-center">
+    <div class="col-12 col-lg-6">
+      <div class="product-detail-image" aria-hidden="true">{{ producto.icono }}</div>
+    </div>
+
+    <div class="col-12 col-lg-6">
+      <span class="category-tag mb-3">{{ producto.categoria }}</span>
+      <div class="stars mb-2">{{ producto.valoracion }}</div>
+      <h1 class="display-6 fw-bold mb-3">{{ producto.nombre }}</h1>
+      <p class="lead">{{ producto.descripcion }}</p>
+      <p>{{ producto.detalle }}</p>
+
+      <dl class="row border-top border-bottom py-3 my-4">
+        <dt class="col-5 col-sm-4">Precio</dt>
+        <dd class="col-7 col-sm-8 fw-bold mb-2">
+          {{ producto.precio | currency:'EUR':'symbol':'1.2-2' }}
+        </dd>
+        <dt class="col-5 col-sm-4">Stock</dt>
+        <dd class="col-7 col-sm-8 mb-0">{{ producto.stock }} unidades</dd>
+      </dl>
+
+      <div class="d-flex flex-column flex-sm-row gap-2">
+        <button type="button" class="btn btn-session">Agregar al carrito</button>
+        <a routerLink="/catalogo" class="btn btn-outline-kirby">
+          Volver al catalogo
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="!cargando && !producto" class="alert alert-warning">
+    <h1 class="h4 alert-heading">Producto no encontrado</h1>
+    <p>No hay un producto disponible con ese identificador.</p>
+    <a routerLink="/catalogo" class="btn btn-primary">Volver al catalogo</a>
+  </div>
+</section>

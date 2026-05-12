@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-label="Peluche Kirby Estrella">
+  <rect width="640" height="420" fill="#e7f5ff"/>
+  <path d="m320 68 43 87 96 14-69 67 16 95-86-45-86 45 16-95-69-67 96-14z" fill="#ffd43b"/>
+  <circle cx="320" cy="222" r="96" fill="#f783ac"/>
+  <ellipse cx="288" cy="196" rx="14" ry="31" fill="#212529"/>
+  <ellipse cx="352" cy="196" rx="14" ry="31" fill="#212529"/>
+  <path d="M292 246c18 18 38 18 56 0" fill="none" stroke="#862e4e" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="248" cy="232" r="16" fill="#f06595"/>
+  <circle cx="392" cy="232" r="16" fill="#f06595"/>
+</svg>

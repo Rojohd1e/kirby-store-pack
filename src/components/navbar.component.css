@@ -1,37 +1,51 @@
 .navbar {
-  display: flex;
-  justify-content: space-between;
+  background: #ffffff !important;
+  border-bottom: 3px solid #ffd6ec;
+  box-shadow: 0 4px 20px rgba(255, 107, 174, 0.18);
+  position: relative;
+  z-index: 10;
+}
+
+.navbar-brand {
   align-items: center;
-  background-color: #333;
-  color: white;
-  padding: 1rem;
-}
-
-.navbar-brand a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.navbar-nav {
-  list-style: none;
+  color: #e0488e !important;
   display: flex;
-  margin: 0;
-  padding: 0;
+  font-family: "Baloo 2", "Nunito", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 800;
+  gap: 10px;
 }
 
-.navbar-nav li {
-  margin-left: 1rem;
+.kirby-logo {
+  align-items: center;
+  animation: bobble 2.5s ease-in-out infinite;
+  background: #ff6bae;
+  border-radius: 50%;
+  box-shadow: 0 3px 10px rgba(255, 107, 174, 0.4);
+  display: inline-flex;
+  font-size: 1.2rem;
+  height: 38px;
+  justify-content: center;
+  width: 38px;
 }
 
-.navbar-nav a {
-  color: white;
-  text-decoration: none;
-  padding: 0.5rem;
-  transition: background-color 0.3s;
+.nav-link {
+  color: #7a4060 !important;
+  font-size: 0.95rem;
+  font-weight: 700;
 }
 
-.navbar-nav a:hover {
-  background-color: #555;
+.nav-link:hover {
+  color: #e0488e !important;
+}
+
+@keyframes bobble {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
 }

@@ -1,12 +1,58 @@
-<div class="home">
-  <h1>Bienvenido a KirbyTienda</h1>
-  <h2>Productos Destacados</h2>
-  <div class="featured-products">
-    <div *ngFor="let product of featuredProducts" class="product-card">
-      <img [src]="product.image" [alt]="product.name">
-      <h3>{{ product.name }}</h3>
-      <p>{{ product.price | currency }}</p>
-      <button>Ver Detalles</button>
+<section class="home-hero">
+  <div class="container">
+    <div class="row align-items-center justify-content-center text-center text-lg-start g-5">
+      <div class="col-12 col-lg-7">
+        <p class="kirby-eyebrow mb-2">KirbyShop</p>
+        <h1 class="section-title">Bienvenido al Mundo de Kirby</h1>
+        <p class="hero-copy mt-4 mb-4">
+          Accesorios, peluches y detalles kawaii inspirados en Dream Land.
+        </p>
+        <a routerLink="/catalogo" class="btn btn-session hero-button">
+          Ver Catalogo Completo
+        </a>
+      </div>
+
+      <div class="col-12 col-lg-5">
+        <div class="hero-showcase">
+          <div class="hero-orbit orbit-one">🧸</div>
+          <div class="hero-orbit orbit-two">⭐</div>
+          <div class="hero-orbit orbit-three">☕</div>
+          <img
+            src="img/kirby-star.svg"
+            alt="Kirby con estrella"
+            class="img-fluid hero-main-image"
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="features-strip mt-5">
+      <div class="feature-pill"><span>🚀</span> Envio gratis +35 EUR</div>
+      <div class="feature-pill"><span>✅</span> Producto seleccionado</div>
+      <div class="feature-pill"><span>💝</span> Ediciones kawaii</div>
+      <div class="feature-pill"><span>🔁</span> Devolucion 30 dias</div>
     </div>
   </div>
-</div>
+</section>
+
+<section class="container pb-5">
+  <h2 class="home-section-title text-center mb-4">Productos Destacados</h2>
+
+  <div class="row g-4">
+    <div class="col-12 col-md-4" *ngFor="let producto of productosDestacados">
+      <article class="home-product-card h-100">
+        <div class="home-product-image">
+          <img [src]="producto.imagen" [alt]="producto.nombre">
+        </div>
+        <div class="p-4">
+          <div class="stars">{{ producto.valoracion }}</div>
+          <h3>{{ producto.nombre }}</h3>
+          <p class="price">{{ producto.precio | currency:'EUR':'symbol':'1.2-2' }}</p>
+          <a [routerLink]="['/producto', producto.id]" class="btn-details">
+            Ver Detalle
+          </a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>

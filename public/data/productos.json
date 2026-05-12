@@ -1,0 +1,67 @@
+[
+  {
+    "id": 1,
+    "nombre": "Peluche Kirby Jumbo 40cm",
+    "descripcion": "El peluche rosado mas adorable de Dream Land. Suave, abrazable y perfecto para coleccionar.",
+    "precio": 34.99,
+    "imagen": "img/kirby-star.svg",
+    "icono": "🧸",
+    "categoria": "Peluches & Figuras",
+    "detalle": "Peluche grande de tacto suave con acabado kawaii, ideal para decorar la habitacion o regalar a fans de Kirby.",
+    "stock": 12,
+    "etiqueta": "Top",
+    "valoracion": "★★★★★"
+  },
+  {
+    "id": 2,
+    "nombre": "Camiseta Poyo! Unisex",
+    "descripcion": "Camiseta de algodon con el iconico Poyo! de Kirby. Comoda, lavable y con estilo kawaii.",
+    "precio": 22.5,
+    "imagen": "img/warp-star-shirt.svg",
+    "icono": "👕",
+    "categoria": "Ropa & Moda",
+    "detalle": "Camiseta unisex de corte regular, disponible en varias tallas y pensada para uso diario.",
+    "stock": 18,
+    "etiqueta": "",
+    "valoracion": "★★★★☆"
+  },
+  {
+    "id": 3,
+    "nombre": "Mochila Star Rod Rosa",
+    "descripcion": "Mochila kawaii con diseno inspirado en la estrella de Kirby y bolsillos multiples.",
+    "precio": 41.99,
+    "imagen": "img/kirby-classic.svg",
+    "icono": "🎒",
+    "categoria": "Accesorios",
+    "detalle": "Mochila con asas reforzadas, bolsillo exterior y espacio para libros, tablet o accesorios.",
+    "stock": 9,
+    "etiqueta": "Nuevo",
+    "valoracion": "★★★★★"
+  },
+  {
+    "id": 4,
+    "nombre": "Taza Kirby & Meta Knight",
+    "descripcion": "Taza ceramica 350 ml con diseno exclusivo de Kirby y Meta Knight.",
+    "precio": 16.9,
+    "imagen": "img/dream-land-mug.svg",
+    "icono": "☕",
+    "categoria": "Hogar & Cocina",
+    "detalle": "Apta para lavavajillas y microondas. Una pieza practica para desayunos y escritorios.",
+    "stock": 20,
+    "etiqueta": "Nuevo",
+    "valoracion": "★★★★★"
+  },
+  {
+    "id": 5,
+    "nombre": "Set Papeleria Dream Land",
+    "descripcion": "Libreta A5, boligrafos y stickers exclusivos con detalles inspirados en Dream Land.",
+    "precio": 18.99,
+    "imagen": "img/kirby-stickers.svg",
+    "icono": "📓",
+    "categoria": "Papeleria",
+    "detalle": "Pack completo para clase o escritorio: libreta, boligrafos y stickers con acabado mate.",
+    "stock": 30,
+    "etiqueta": "",
+    "valoracion": "★★★★☆"
+  }
+]
